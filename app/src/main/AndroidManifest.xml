@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogInActivity"></activity>
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity
+            android:name=".Invalid"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".RegisterActivity"></activity>
     </application>
 
 </manifest>
