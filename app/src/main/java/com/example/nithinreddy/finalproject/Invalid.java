@@ -17,6 +17,6 @@ public class Invalid extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (width*0.5), (int) (height*0.5));
+        getWindow().setLayout((int) (width*0.75), (int) (height*0.25));
     }
 }

@@ -12,8 +12,9 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText usernameTxt;
     private EditText passwordTxt;
     private EditText verifyPasswordTxt;
-    public String username = "";
-    public String password = "";
+    private String username = "";
+    private String password = "";
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class SignUpActivity extends AppCompatActivity {
                 if (isValid()) {
                     username = usernameTxt.getText().toString();
                     password = passwordTxt.getText().toString();
+                    user = new User(username, password);
                     Intent intent = new Intent(SignUpActivity.this, Invalid.class);
                     startActivity(intent);
                 } else {
