@@ -28,7 +28,7 @@
         app:layout_constraintVertical_bias="0.434" />
 
     <Button
-        android:id="@+id/logInButton"
+        android:id="@+id/logInBttn"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

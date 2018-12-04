@@ -8,4 +8,16 @@ public class User {
         username = setUsername;
         password = setPassword;
     }
+    private String getUsername() {
+        return username;
+    }
+    private String getPassword() {
+        return password;
+    }
+    private void setPassword(String setPassword) {
+        password = setPassword;
+    }
+    private void setUsername(String setUsername) {
+        username = setUsername;
+    }
 }

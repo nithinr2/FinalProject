@@ -29,17 +29,24 @@ public class SignUpActivity extends AppCompatActivity {
         signUpBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isValid()) {
+                usernameTxt = findViewById(R.id.usernameTxt);
+                passwordTxt = findViewById(R.id.passwordTxt);
+                verifyPasswordTxt = findViewById(R.id.verifyPasswordTxt);
+                if (!isValid()) {
+                    openInvalidClass();
+                } else {
                     username = usernameTxt.getText().toString();
                     password = passwordTxt.getText().toString();
                     user = new User(username, password);
-                    Intent intent = new Intent(SignUpActivity.this, Invalid.class);
-                    startActivity(intent);
-                } else {
                     openBaseActivity();
                 }
             }
         });
+    }
+
+    public void openInvalidClass() {
+        Intent intent = new Intent(this, Invalid.class);
+        startActivity(intent);
     }
 
     public void openBaseActivity() {
@@ -48,8 +55,10 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public boolean isValid() {
-        if (passwordTxt.getText().equals(verifyPasswordTxt.getText())
-                && passwordTxt.getText().toString().length() >= 5
+        String password = passwordTxt.getText().toString();
+        String verifyPassword = verifyPasswordTxt.getText().toString();
+        if (password.equals(verifyPassword)
+               && passwordTxt.getText().toString().length() >= 5
                 && usernameTxt.getText().toString().length() >= 5) {
             return true;
         }
