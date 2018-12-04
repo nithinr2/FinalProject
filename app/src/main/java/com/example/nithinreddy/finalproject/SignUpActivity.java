@@ -55,9 +55,15 @@ public class SignUpActivity extends AppCompatActivity {
     public boolean isValid() {
         String password = passwordTxt.getText().toString();
         String verifyPassword = verifyPasswordTxt.getText().toString();
+        String username = usernameTxt.getText().toString();
         if (password.equals(verifyPassword)
                && passwordTxt.getText().toString().length() >= 5
                 && usernameTxt.getText().toString().length() >= 5) {
+            for (int i = 0; i < User.users.size(); i++) {
+                if (username.equals(User.users.get(i).getUsername())) {
+                    return false;
+                }
+            }
             return true;
         }
         return false;

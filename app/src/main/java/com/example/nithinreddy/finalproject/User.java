@@ -11,16 +11,16 @@ public class User {
         username = setUsername;
         password = setPassword;
     }
-    private String getUsername() {
+    public String getUsername() {
         return username;
     }
-    private String getPassword() {
+    public String getPassword() {
         return password;
     }
-    private void setPassword(String setPassword) {
+    public void setPassword(String setPassword) {
         password = setPassword;
     }
-    private void setUsername(String setUsername) {
+    public void setUsername(String setUsername) {
         username = setUsername;
     }
 }

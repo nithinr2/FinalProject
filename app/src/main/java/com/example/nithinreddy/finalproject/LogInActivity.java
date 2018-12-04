@@ -26,8 +26,9 @@ public class LogInActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!isValid()) {
                     openInvalidClass();
+                } else {
+                    openBaseActivity();
                 }
-                openBaseActivity();
             }
         });
     }
@@ -43,10 +44,11 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     public boolean isValid() {
-        String password = passwordTxt.getText().toString();
-        String username = usernameTxt.getText().toString();
+       String password = passwordTxt.getText().toString();
+       String username = usernameTxt.getText().toString();
         for (int i = 0; i < User.users.size(); i++) {
-            if (username.equals(User.users.get(i)) && password.equals(User.users.get(i))) {
+            if (username.equals(User.users.get(i).getUsername())
+                    && password.equals(User.users.get(i).getPassword())) {
                 return true;
             }
         }
