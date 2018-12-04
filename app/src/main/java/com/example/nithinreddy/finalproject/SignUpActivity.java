@@ -29,15 +29,13 @@ public class SignUpActivity extends AppCompatActivity {
         signUpBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                usernameTxt = findViewById(R.id.usernameTxt);
-                passwordTxt = findViewById(R.id.passwordTxt);
-                verifyPasswordTxt = findViewById(R.id.verifyPasswordTxt);
                 if (!isValid()) {
                     openInvalidClass();
                 } else {
                     username = usernameTxt.getText().toString();
                     password = passwordTxt.getText().toString();
                     user = new User(username, password);
+                    User.users.add(user);
                     openBaseActivity();
                 }
             }

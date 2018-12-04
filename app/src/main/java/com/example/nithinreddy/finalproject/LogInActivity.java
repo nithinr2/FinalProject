@@ -24,7 +24,7 @@ public class LogInActivity extends AppCompatActivity {
         logInBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isValid()) { // Finish implementation!
+                if (!isValid()) {
                     openInvalidClass();
                 }
                 openBaseActivity();
@@ -45,7 +45,11 @@ public class LogInActivity extends AppCompatActivity {
     public boolean isValid() {
         String password = passwordTxt.getText().toString();
         String username = usernameTxt.getText().toString();
-        //if (password.equals())
-        return true;
+        for (int i = 0; i < User.users.size(); i++) {
+            if (username.equals(User.users.get(i)) && password.equals(User.users.get(i))) {
+                return true;
+            }
+        }
+        return false;
     }
 }

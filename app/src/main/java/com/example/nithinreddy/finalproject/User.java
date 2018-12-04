@@ -1,8 +1,11 @@
 package com.example.nithinreddy.finalproject;
 
+import java.util.ArrayList;
+
 public class User {
     private String username;
     private String password;
+    public static ArrayList<User> users = new ArrayList<>();
 
     public User(String setUsername, String setPassword) {
         username = setUsername;
