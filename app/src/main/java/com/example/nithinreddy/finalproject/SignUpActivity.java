@@ -35,7 +35,7 @@ public class SignUpActivity extends AppCompatActivity {
                     username = usernameTxt.getText().toString();
                     password = passwordTxt.getText().toString();
                     user = new User(username, password);
-                    User.users.add(user);
+                    User.users.add(0, user);
                     openBaseActivity();
                 }
             }
