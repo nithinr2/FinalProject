@@ -36,7 +36,7 @@ public class SignUpActivity extends AppCompatActivity {
                     password = passwordTxt.getText().toString();
                     user = new User(username, password);
                     User.users.add(0, user);
-                    openBaseActivity();
+                    openRegisterActivity();
                 }
             }
         });
@@ -47,8 +47,8 @@ public class SignUpActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openBaseActivity() {
-        Intent intent = new Intent(this, BaseActivity.class);
+    public void openRegisterActivity() {
+        Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
 
