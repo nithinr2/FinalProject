@@ -46,40 +46,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 1" />
+            android:text="Staying in and playing video games" />
 
         <RadioButton
             android:id="@+id/optionTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 2" />
+            android:text="Hanging out with your roomates" />
 
         <RadioButton
             android:id="@+id/optionThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 3" />
+            android:text="Going out to eat with your friends" />
 
         <RadioButton
             android:id="@+id/optionFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 4" />
+            android:text="Going out with your wing man/woman" />
 
         <RadioButton
             android:id="@+id/optionFive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 5" />
+            android:text="Bar hopping with a large group of friends" />
     </RadioGroup>
 
     <TextView
         android:id="@+id/question2"
-        android:layout_width="wrap_content"
+        android:layout_width="303dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -87,12 +87,12 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Question"
+        android:text="Which of the following is closest to your typical Friday night?"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
+        app:layout_constraintVertical_bias="0.103" />
 </android.support.constraint.ConstraintLayout>

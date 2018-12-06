@@ -25,6 +25,11 @@ public class QuestionSixActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isValid()) {
+                    if (selectedAnswer.getText().toString().equals("Pessimistic")) {
+                        User.users.get(0).setQuestionSix(1);
+                    } else {
+                        User.users.get(0).setQuestionSix(2);
+                    }
                     openQuestionSevenActivity();
                 }
             }

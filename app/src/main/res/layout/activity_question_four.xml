@@ -46,35 +46,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 1" />
+            android:text="Only when I have to" />
 
         <RadioButton
             android:id="@+id/optionTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 2" />
+            android:text="When there's something to do" />
 
         <RadioButton
             android:id="@+id/optionThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 3" />
+            android:text="When the weather is nice" />
 
         <RadioButton
             android:id="@+id/optionFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 4" />
+            android:text="Whenever I'm free" />
 
         <RadioButton
             android:id="@+id/optionFive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 5" />
+            android:text="I live outside" />
     </RadioGroup>
 
     <TextView
@@ -87,11 +87,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Question"
+        android:text="When do you go outside?"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.274"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.115" />

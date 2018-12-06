@@ -25,6 +25,17 @@ public class QuestionTwoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isValid()) {
+                    if (selectedAnswer.getText().toString().equals("Almost all")) {
+                        User.users.get(0).setQuestionTwo(1);
+                    } else if (selectedAnswer.getText().toString().equals("Majority")) {
+                        User.users.get(0).setQuestionTwo(2);
+                    } else if (selectedAnswer.getText().toString().equals("About half")) {
+                        User.users.get(0).setQuestionTwo(3);
+                    } else if (selectedAnswer.getText().toString().equals("Some")) {
+                        User.users.get(0).setQuestionTwo(4);
+                    } else {
+                        User.users.get(0).setQuestionTwo(5);
+                    }
                     openQuestionThreeActivity();
                 }
             }

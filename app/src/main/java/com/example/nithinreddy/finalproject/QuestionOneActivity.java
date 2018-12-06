@@ -25,6 +25,17 @@ public class QuestionOneActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isValid()) {
+                    if (selectedAnswer.getText().toString().equals("Not very")) {
+                        User.users.get(0).setQuestionOne(1);
+                    } else if (selectedAnswer.getText().toString().equals("Somewhat")) {
+                        User.users.get(0).setQuestionOne(2);
+                    } else if (selectedAnswer.getText().toString().equals("The same as everyone else")) {
+                        User.users.get(0).setQuestionOne(3);
+                    } else if (selectedAnswer.getText().toString().equals("Very")) {
+                        User.users.get(0).setQuestionOne(4);
+                    } else {
+                        User.users.get(0).setQuestionOne(5);
+                    }
                     openQuestionTwoActivity();
                 }
             }

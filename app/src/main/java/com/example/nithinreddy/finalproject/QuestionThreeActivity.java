@@ -25,6 +25,17 @@ public class QuestionThreeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isValid()) {
+                    if (selectedAnswer.getText().toString().equals("Staying in and playing video games")) {
+                        User.users.get(0).setQuestionThree(1);
+                    } else if (selectedAnswer.getText().toString().equals("Hanging out with your roomates")) {
+                        User.users.get(0).setQuestionThree(2);
+                    } else if (selectedAnswer.getText().toString().equals("Going out to eat with your friends")) {
+                        User.users.get(0).setQuestionThree(3);
+                    } else if (selectedAnswer.getText().toString().equals("Going out with your wing man/woman")) {
+                        User.users.get(0).setQuestionThree(4);
+                    } else {
+                        User.users.get(0).setQuestionThree(5);
+                    }
                     openQuestionFourActivity();
                 }
             }

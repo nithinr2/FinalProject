@@ -25,6 +25,11 @@ public class QuestionSevenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isValid()) {
+                    if (selectedAnswer.getText().toString().equals("Stressed")) {
+                        User.users.get(0).setQuestionSeven(1);
+                    } else {
+                        User.users.get(0).setQuestionSeven(2);
+                    }
                     openQuestionEightActivity();
                 }
             }

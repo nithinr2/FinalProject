@@ -26,7 +26,7 @@
 
     <TextView
         android:id="@+id/question3"
-        android:layout_width="wrap_content"
+        android:layout_width="318dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -34,14 +34,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Question"
+        android:text="How much of your day do you spend alone?"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
+        app:layout_constraintVertical_bias="0.099" />
 
     <RadioGroup
         android:id="@+id/radioGrp"
@@ -65,35 +65,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 1" />
+            android:text="Almost all" />
 
         <RadioButton
             android:id="@+id/optionTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 2" />
+            android:text="Majority" />
 
         <RadioButton
             android:id="@+id/optionThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 3" />
+            android:text="About half" />
 
         <RadioButton
             android:id="@+id/optionFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 4" />
+            android:text="Some" />
 
         <RadioButton
             android:id="@+id/optionFive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Option 5" />
+            android:text="Almost None" />
     </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>

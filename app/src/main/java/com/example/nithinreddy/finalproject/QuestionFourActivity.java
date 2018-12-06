@@ -25,6 +25,17 @@ public class QuestionFourActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isValid()) {
+                    if (selectedAnswer.getText().toString().equals("Only when I have to")) {
+                        User.users.get(0).setQuestionFour(1);
+                    } else if (selectedAnswer.getText().toString().equals("When there's something to do")) {
+                        User.users.get(0).setQuestionFour(2);
+                    } else if (selectedAnswer.getText().toString().equals("When the weather is nice")) {
+                        User.users.get(0).setQuestionFour(3);
+                    } else if (selectedAnswer.getText().toString().equals("Whenever I'm free")) {
+                        User.users.get(0).setQuestionFour(4);
+                    } else {
+                        User.users.get(0).setQuestionFour(5);
+                    }
                     openQuestionFiveActivity();
                 }
             }
