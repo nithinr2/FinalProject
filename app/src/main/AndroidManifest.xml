@@ -22,7 +22,17 @@
             android:name=".Invalid"
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".BaseActivity" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".QuestionOneActivity" />
+        <activity android:name=".QuestionTwoActivity" />
+        <activity android:name=".QuestionThreeActivity" />
+        <activity android:name=".QuestionFourActivity" />
+        <activity android:name=".QuestionFiveActivity" />
+        <activity android:name=".QuestionSixActivity" />
+        <activity android:name=".QuestionSevenActivity" />
+        <activity android:name=".QuestionEightActivity" />
+        <activity android:name=".QuestionNineActivity" />
+        <activity android:name=".QuestionTenActivity"></activity>
     </application>
 
 </manifest>
