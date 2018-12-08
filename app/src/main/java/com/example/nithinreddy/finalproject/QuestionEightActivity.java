@@ -26,9 +26,9 @@ public class QuestionEightActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isValid()) {
                     if (selectedAnswer.getText().toString().equals("Tired")) {
-                        User.users.get(0).setQuestionEight(1);
+                        User.users.get(User.currentUserIndex).setQuestionEight(1);
                     } else {
-                        User.users.get(0).setQuestionEight(2);
+                        User.users.get(User.currentUserIndex).setQuestionEight(2);
                     }
                     openQuestionNineActivity();
                 }

@@ -10,6 +10,7 @@ public class User {
     private String gender;
     private int[] answers = new int[10];
     public static ArrayList<User> users = new ArrayList<>();
+    public static int currentUserIndex;
 
     public User(String setUsername, String setPassword) {
         username = setUsername;
@@ -54,8 +55,8 @@ public class User {
         }
         return null;
     }
-    public int calculateScore() {
-        int score = 0;
+    public double calculateScore() {
+        double score = 0;
         for (int i = 0; i < answers.length; i++) {
             score += answers[i];
         }

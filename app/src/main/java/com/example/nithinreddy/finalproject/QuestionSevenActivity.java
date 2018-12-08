@@ -26,9 +26,9 @@ public class QuestionSevenActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isValid()) {
                     if (selectedAnswer.getText().toString().equals("Stressed")) {
-                        User.users.get(0).setQuestionSeven(1);
+                        User.users.get(User.currentUserIndex).setQuestionSeven(1);
                     } else {
-                        User.users.get(0).setQuestionSeven(2);
+                        User.users.get(User.currentUserIndex).setQuestionSeven(2);
                     }
                     openQuestionEightActivity();
                 }

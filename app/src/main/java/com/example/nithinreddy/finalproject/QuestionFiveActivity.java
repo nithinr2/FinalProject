@@ -26,15 +26,15 @@ public class QuestionFiveActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isValid()) {
                     if (selectedAnswer.getText().toString().equals("Never, working out is too much")) {
-                        User.users.get(0).setQuestionFive(1);
+                        User.users.get(User.currentUserIndex).setQuestionFive(1);
                     } else if (selectedAnswer.getText().toString().equals("I went to the gym two weeks ago")) {
-                        User.users.get(0).setQuestionFive(2);
+                        User.users.get(User.currentUserIndex).setQuestionFive(2);
                     } else if (selectedAnswer.getText().toString().equals("A couple times a week")) {
-                        User.users.get(0).setQuestionFive(3);
+                        User.users.get(User.currentUserIndex).setQuestionFive(3);
                     } else if (selectedAnswer.getText().toString().equals("Almost everyday")) {
-                        User.users.get(0).setQuestionFive(4);
+                        User.users.get(User.currentUserIndex).setQuestionFive(4);
                     } else {
-                        User.users.get(0).setQuestionFive(5);
+                        User.users.get(User.currentUserIndex).setQuestionFive(5);
                     }
                     openQuestionSixActivity();
                 }

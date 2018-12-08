@@ -26,9 +26,9 @@ public class QuestionNineActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isValid()) {
                     if (selectedAnswer.getText().toString().equals("Sweet")) {
-                        User.users.get(0).setQuestionNine(1);
+                        User.users.get(User.currentUserIndex).setQuestionNine(1);
                     } else {
-                        User.users.get(0).setQuestionNine(2);
+                        User.users.get(User.currentUserIndex).setQuestionNine(2);
                     }
                     openQuestionTenActivity();
                 }

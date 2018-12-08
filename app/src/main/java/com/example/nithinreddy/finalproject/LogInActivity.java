@@ -25,6 +25,12 @@ public class LogInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!isValid()) {
+                    for (int i = 0; i < User.users.size(); i++) {
+                        if (User.users.get(i).getUsername().equals(usernameTxt.getText().toString())) {
+                            User.currentUserIndex = i;
+                            break;
+                        }
+                    }
                     openInvalidClass();
                 } else {
                     openBaseActivity();

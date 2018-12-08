@@ -26,9 +26,9 @@ public class QuestionSixActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isValid()) {
                     if (selectedAnswer.getText().toString().equals("Pessimistic")) {
-                        User.users.get(0).setQuestionSix(1);
+                        User.users.get(User.currentUserIndex).setQuestionSix(1);
                     } else {
-                        User.users.get(0).setQuestionSix(2);
+                        User.users.get(User.currentUserIndex).setQuestionSix(2);
                     }
                     openQuestionSevenActivity();
                 }
