@@ -38,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
                     User.users.get(User.currentUserIndex).setName(name);
                     User.users.get(User.currentUserIndex).setPhone(phone);
                     User.users.get(User.currentUserIndex).setGender(gender);
-                    openBaseActivity();
+                    openQuestionOneActivity();
                 }
             }
         });
@@ -49,8 +49,8 @@ public class RegisterActivity extends AppCompatActivity {
         }
         return true;
     }
-    public void openBaseActivity() {
-        Intent intent = new Intent(this, BaseActivity.class);
+    public void openQuestionOneActivity() {
+        Intent intent = new Intent(this, QuestionOneActivity.class);
         startActivity(intent);
     }
 }

@@ -3,10 +3,12 @@ package com.example.nithinreddy.finalproject;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class QuestionOneActivity extends AppCompatActivity {
     private Button nextBttn;
@@ -45,11 +47,16 @@ public class QuestionOneActivity extends AppCompatActivity {
     public boolean isValid() {
         int radioBttnId = radioGrp.getCheckedRadioButtonId();
         selectedAnswer = findViewById(radioBttnId);
-        if (selectedAnswer == null) {
-            return false;
+        if (radioGrp.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(getApplicationContext(), "Nothing is selected", Toast.LENGTH_SHORT).show();
+            Log.d("", "Not working");
         }
-        return true;
+        if (selectedAnswer != null) {
+            return true;
+        }
+        return false;
     }
+
 
     public void openQuestionTwoActivity() {
         Intent intent = new Intent(this, QuestionTwoActivity.class);

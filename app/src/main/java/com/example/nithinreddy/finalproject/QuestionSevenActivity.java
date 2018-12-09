@@ -16,7 +16,7 @@ public class QuestionSevenActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_one);
+        setContentView(R.layout.activity_question_seven);
 
         radioGrp = findViewById(R.id.radioGrp);
 
@@ -26,9 +26,9 @@ public class QuestionSevenActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isValid()) {
                     if (selectedAnswer.getText().toString().equals("Stressed")) {
-                        User.users.get(User.currentUserIndex).setQuestionSeven(1);
-                    } else {
                         User.users.get(User.currentUserIndex).setQuestionSeven(2);
+                    } else {
+                        User.users.get(User.currentUserIndex).setQuestionSeven(4);
                     }
                     openQuestionEightActivity();
                 }

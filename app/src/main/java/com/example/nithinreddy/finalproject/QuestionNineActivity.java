@@ -16,7 +16,7 @@ public class QuestionNineActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_one);
+        setContentView(R.layout.activity_question_nine);
 
         radioGrp = findViewById(R.id.radioGrp);
 
@@ -26,9 +26,9 @@ public class QuestionNineActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isValid()) {
                     if (selectedAnswer.getText().toString().equals("Sweet")) {
-                        User.users.get(User.currentUserIndex).setQuestionNine(1);
-                    } else {
                         User.users.get(User.currentUserIndex).setQuestionNine(2);
+                    } else {
+                        User.users.get(User.currentUserIndex).setQuestionNine(4);
                     }
                     openQuestionTenActivity();
                 }

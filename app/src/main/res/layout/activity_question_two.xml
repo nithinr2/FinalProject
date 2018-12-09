@@ -8,7 +8,7 @@
     tools:context=".QuestionTwoActivity">
 
     <Button
-        android:id="@+id/nextBttn2"
+        android:id="@+id/nextBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

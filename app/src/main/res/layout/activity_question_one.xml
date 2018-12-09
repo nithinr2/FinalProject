@@ -47,35 +47,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Not very" />
+            android:text="Not very"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/optionTwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Somewhat" />
+            android:text="Somewhat"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/optionThree"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="The same as everyone else" />
+            android:text="The same as everyone else"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/optionFour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Very" />
+            android:text="Very"
+            android:checked="true"/>
 
         <RadioButton
             android:id="@+id/optionFive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="I lead the conversation" />
+            android:text="I lead the conversation"
+            android:checked="true"/>
     </RadioGroup>
 
     <TextView

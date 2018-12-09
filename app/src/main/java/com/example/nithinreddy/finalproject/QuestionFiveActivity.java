@@ -16,7 +16,7 @@ public class QuestionFiveActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_one);
+        setContentView(R.layout.activity_question_five);
 
         radioGrp = findViewById(R.id.radioGrp);
 

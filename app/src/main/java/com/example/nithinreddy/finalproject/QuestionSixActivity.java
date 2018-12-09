@@ -16,7 +16,7 @@ public class QuestionSixActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_one);
+        setContentView(R.layout.activity_question_six);
 
         radioGrp = findViewById(R.id.radioGrp);
 
@@ -26,7 +26,7 @@ public class QuestionSixActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isValid()) {
                     if (selectedAnswer.getText().toString().equals("Pessimistic")) {
-                        User.users.get(User.currentUserIndex).setQuestionSix(1);
+                        User.users.get(User.currentUserIndex).setQuestionSix(4);
                     } else {
                         User.users.get(User.currentUserIndex).setQuestionSix(2);
                     }

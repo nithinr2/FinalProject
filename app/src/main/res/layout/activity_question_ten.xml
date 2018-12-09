@@ -80,7 +80,7 @@
         app:layout_constraintVertical_bias="0.115" />
 
     <Button
-        android:id="@+id/nextBttn10"
+        android:id="@+id/nextBttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
