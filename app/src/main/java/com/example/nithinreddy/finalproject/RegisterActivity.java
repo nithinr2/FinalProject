@@ -35,9 +35,9 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isValid()) {
-                    User.users.get(User.currentUserIndex).setName(name);
-                    User.users.get(User.currentUserIndex).setPhone(phone);
-                    User.users.get(User.currentUserIndex).setGender(gender);
+                    User.users.get(0).setName(name);
+                    User.users.get(0).setPhone(phone);
+                    User.users.get(0).setGender(gender);
                     openQuestionOneActivity();
                 }
             }

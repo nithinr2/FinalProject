@@ -26,15 +26,15 @@ public class QuestionTwoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isValid()) {
                     if (selectedAnswer.getText().toString().equals("Almost all")) {
-                        User.users.get(User.currentUserIndex).setQuestionTwo(1);
+                        User.users.get(0).setQuestionTwo(1);
                     } else if (selectedAnswer.getText().toString().equals("Majority")) {
-                        User.users.get(User.currentUserIndex).setQuestionTwo(2);
+                        User.users.get(0).setQuestionTwo(2);
                     } else if (selectedAnswer.getText().toString().equals("About half")) {
-                        User.users.get(User.currentUserIndex).setQuestionTwo(3);
+                        User.users.get(0).setQuestionTwo(3);
                     } else if (selectedAnswer.getText().toString().equals("Some")) {
-                        User.users.get(User.currentUserIndex).setQuestionTwo(4);
+                        User.users.get(0).setQuestionTwo(4);
                     } else {
-                        User.users.get(User.currentUserIndex).setQuestionTwo(5);
+                        User.users.get(0).setQuestionTwo(5);
                     }
                     openQuestionThreeActivity();
                 }

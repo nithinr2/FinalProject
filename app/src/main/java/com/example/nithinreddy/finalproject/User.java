@@ -11,8 +11,8 @@ public class User {
     private double score;
     private int[] answers = new int[9];
     public static ArrayList<User> users = new ArrayList<>();
-    //fix below
-    public static int currentUserIndex;
+    public static User currentUser;
+
 
     public User(String setUsername, String setPassword) {
         username = setUsername;
@@ -58,6 +58,18 @@ public class User {
         user5.setGender("Female");
         user5.answers = new int[]{4, 4, 4, 4, 4, 4, 4, 2, 4};
         users.add(0, user5);
+    }
+
+    public static int getCurrentUserIndex(User temp) {
+        if (temp == null) {
+            return -1;
+        }
+        for (int i = 0; i < User.users.size(); i++) {
+            if(temp.getUsername().equals(User.users.get(i).getUsername())) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     public String getUsername() {

@@ -2,6 +2,7 @@ package com.example.nithinreddy.finalproject;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class BaseActivity extends AppCompatActivity {
@@ -10,12 +11,15 @@ public class BaseActivity extends AppCompatActivity {
     private TextView genderOneTxt; private TextView genderTwoTxt;
     private TextView genderThreeTxt; private TextView phoneOneTxt;
     private TextView phoneTwoTxt; private TextView phoneThreeTxt;
+    private ImageView profilePic;
     private User userOne; private User userTwo; private User userThree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
+
+        profilePic = findViewById(R.id.imageView2);
 
         findMatches();
 
@@ -71,20 +75,20 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
-
     private void findMatches() {
-        double currentUserScore = User.currentUserIndex;
+        int currentUserIndex = User.getCurrentUserIndex(User.currentUser);
+        double currentUserScore = User.users.get(currentUserIndex).calculateScore();
         User bestMatch = User.users.get(0);
-        System.out.println("user name: " + User.users.get(User.currentUserIndex).getName());
-        System.out.println("user index: " + User.currentUserIndex);
+        System.out.println("user name: " + User.users.get(currentUserIndex).getName());
+        System.out.println("user index: " + currentUserIndex);
         System.out.println("current user score: " + currentUserScore);
-        if (User.currentUserIndex == 0) {
+        if (currentUserIndex == 0) {
             bestMatch = User.users.get(1);
         }
         double difference = 6;
         for (int i = 0; i < User.users.size(); i++) {
             double currentScore = User.users.get(i).calculateScore();
-            if (i == User.currentUserIndex) {
+            if (i == currentUserIndex) {
                 continue;
             }
             if (Math.abs(currentScore - currentUserScore) < difference) {

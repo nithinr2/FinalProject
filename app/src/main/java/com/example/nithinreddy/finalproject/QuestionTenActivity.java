@@ -136,6 +136,7 @@ public class QuestionTenActivity extends AppCompatActivity {
 
 
     public void openBaseActivity() {
+        User.currentUser = User.users.get(0);
         Intent intent = new Intent(this, BaseActivity.class);
         startActivity(intent);
     }

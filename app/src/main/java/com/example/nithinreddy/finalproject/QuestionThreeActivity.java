@@ -26,15 +26,15 @@ public class QuestionThreeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (isValid()) {
                     if (selectedAnswer.getText().toString().equals("Staying in and playing video games")) {
-                        User.users.get(User.currentUserIndex).setQuestionThree(1);
+                        User.users.get(0).setQuestionThree(1);
                     } else if (selectedAnswer.getText().toString().equals("Hanging out with your roomates")) {
-                        User.users.get(User.currentUserIndex).setQuestionThree(2);
+                        User.users.get(0).setQuestionThree(2);
                     } else if (selectedAnswer.getText().toString().equals("Going out to eat with your friends")) {
-                        User.users.get(User.currentUserIndex).setQuestionThree(3);
+                        User.users.get(0).setQuestionThree(3);
                     } else if (selectedAnswer.getText().toString().equals("Going out with your wing man/woman")) {
-                        User.users.get(User.currentUserIndex).setQuestionThree(4);
+                        User.users.get(0).setQuestionThree(4);
                     } else {
-                        User.users.get(User.currentUserIndex).setQuestionThree(5);
+                        User.users.get(0).setQuestionThree(5);
                     }
                     openQuestionFourActivity();
                 }

@@ -12,7 +12,6 @@ public class LogInActivity extends AppCompatActivity {
     private EditText passwordTxt;
     private EditText usernameTxt;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +27,6 @@ public class LogInActivity extends AppCompatActivity {
                 if (!isValid()) {
                     for (int i = 0; i < User.users.size(); i++) {
                         if (User.users.get(i).getUsername().equals(usernameTxt.getText().toString())) {
-                            User.currentUserIndex = i;
                             break;
                         }
                     }
@@ -46,6 +44,7 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     public void openBaseActivity() {
+        User.currentUser = User.getUser(usernameTxt.getText().toString());
         Intent intent = new Intent(this, BaseActivity.class); // Fix!
         startActivity(intent);
     }
