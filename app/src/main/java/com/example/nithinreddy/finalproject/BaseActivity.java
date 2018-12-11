@@ -11,6 +11,7 @@ public class BaseActivity extends AppCompatActivity {
     private TextView genderThreeTxt; private TextView phoneOneTxt;
     private TextView phoneTwoTxt; private TextView phoneThreeTxt;
     private User userOne; private User userTwo; private User userThree;
+    private String hello;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
