@@ -11,7 +11,6 @@ public class BaseActivity extends AppCompatActivity {
     private TextView genderThreeTxt; private TextView phoneOneTxt;
     private TextView phoneTwoTxt; private TextView phoneThreeTxt;
     private User userOne; private User userTwo; private User userThree;
-    private String hello;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +36,7 @@ public class BaseActivity extends AppCompatActivity {
         phoneOneTxt.setText(firstPhone);
 
 
-        CharSequence secondMatch = (CharSequence) userTwo.getName();
+        /*CharSequence secondMatch = (CharSequence) userTwo.getName();
         nameTwoTxt = findViewById(R.id.nameTwoTxt);
         nameTwoTxt.setText(secondMatch);
 
@@ -68,25 +67,31 @@ public class BaseActivity extends AppCompatActivity {
 
         CharSequence thirdPhone = (CharSequence) userThree.getPhone();
         phoneThreeTxt = findViewById(R.id.phoneThreeTxt);
-        phoneThreeTxt.setText(thirdPhone);
+        phoneThreeTxt.setText(thirdPhone);*/
 
     }
 
+
     private void findMatches() {
-        double currentUserScore = User.users.get(User.currentUserIndex).calculateScore();
-        int counter = 0;
+        double currentUserScore = User.currentUserIndex;
+        User bestMatch = User.users.get(0);
+        System.out.println("user name: " + User.users.get(User.currentUserIndex).getName());
+        System.out.println("user index: " + User.currentUserIndex);
+        System.out.println("current user score: " + currentUserScore);
+        if (User.currentUserIndex == 0) {
+            bestMatch = User.users.get(1);
+        }
+        double difference = 6;
         for (int i = 0; i < User.users.size(); i++) {
-            if (Math.abs(User.users.get(i).calculateScore() - currentUserScore) <= 0.5) {
-                if (counter == 1) {
-                    userOne = User.users.get(i);
-                } else if (counter == 2) {
-                    userTwo = User.users.get(i);
-                } else {
-                    userThree = User.users.get(i);
-                    break;
-                }
-                counter++;
+            double currentScore = User.users.get(i).calculateScore();
+            if (i == User.currentUserIndex) {
+                continue;
+            }
+            if (Math.abs(currentScore - currentUserScore) < difference) {
+                bestMatch = User.users.get(i);
+                difference = Math.abs(currentUserScore - bestMatch.calculateScore());
             }
         }
+        userOne = bestMatch;
     }
 }

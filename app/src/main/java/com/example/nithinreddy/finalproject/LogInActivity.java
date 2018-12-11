@@ -12,6 +12,7 @@ public class LogInActivity extends AppCompatActivity {
     private EditText passwordTxt;
     private EditText usernameTxt;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

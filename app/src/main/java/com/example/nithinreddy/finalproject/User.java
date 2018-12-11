@@ -8,14 +8,58 @@ public class User {
     private String name;
     private String phone;
     private String gender;
-    private int[] answers = new int[10];
+    private double score;
+    private int[] answers = new int[9];
     public static ArrayList<User> users = new ArrayList<>();
+    //fix below
     public static int currentUserIndex;
 
     public User(String setUsername, String setPassword) {
         username = setUsername;
         password = setPassword;
     }
+
+    public User() {
+
+    }
+
+    public void addUsers() {
+        User user1 = new User("dogluver", "12354");
+        user1.setName("Philip Zappa");
+        user1.setPhone("(312) 793 - 8211");
+        user1.setGender("Male");
+        user1.answers = new int[]{1, 1, 1, 1, 1, 2, 2, 2, 2};
+        users.add(0, user1);
+
+        User user2 = new User("iLuvDog", "12354");
+        user2.setName("Krystina Power");
+        user2.setPhone("(904) 337 - 1586");
+        user2.setGender("Female");
+        user2.answers = new int[]{5, 5, 5, 5, 5, 4, 4, 4, 4};
+        users.add(0, user2);
+
+        User user3 = new User("dogsRGud", "12354");
+        user3.setName("Odran Barone");
+        user3.setPhone("(515) 462 - 9391");
+        user3.setGender("Gender Fluid");
+        user3.answers = new int[]{3, 3, 3, 3, 3, 2, 4, 2, 4};
+        users.add(0, user3);
+
+        User user4 = new User("corgiLuver23", "12354");
+        user4.setName("Freek Pauwels");
+        user4.setPhone("(208) 794 - 8813");
+        user4.setGender("Male");
+        user4.answers = new int[]{2, 2, 2, 2, 2, 2, 2, 2, 4};
+        users.add(0, user4);
+
+        User user5 = new User("retrieverRetriever", "12354");
+        user5.setName("Amarjeet Chaudhari");
+        user5.setPhone("(408) 805 - 2492");
+        user5.setGender("Female");
+        user5.answers = new int[]{4, 4, 4, 4, 4, 4, 4, 2, 4};
+        users.add(0, user5);
+    }
+
     public String getUsername() {
         return username;
     }
@@ -60,7 +104,7 @@ public class User {
         for (int i = 0; i < answers.length; i++) {
             score += answers[i];
         }
-        score /= 10;
+        score /= 9;
         return score;
     }
 
@@ -73,5 +117,4 @@ public class User {
     public void setQuestionSeven(int setSeven) { answers[6] = setSeven; }
     public void setQuestionEight(int setEight) { answers[7] = setEight; }
     public void setQuestionNine(int setNine) { answers[8] = setNine; }
-    public void setQuestionTen(int setTen) { answers[9] = setTen; }
 }

@@ -89,13 +89,11 @@ public class QuestionTenActivity extends AppCompatActivity {
         QuestionTenActivity.getRequest();
         new DownLoadImageTask(imgView).execute(url);
 
-        nextBttn = findViewById(R.id.nextBttn);
+        nextBttn = findViewById(R.id.nxtBttn);
         nextBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isValid()) {
-                    openBaseActivity();
-                }
+                openBaseActivity();
             }
         });
     }
@@ -135,14 +133,7 @@ public class QuestionTenActivity extends AppCompatActivity {
 
     }
 //API above
-    public boolean isValid() {
-        int radioBttnId = radioGrp.getCheckedRadioButtonId();
-        selectedAnswer = findViewById(radioBttnId);
-        if (selectedAnswer == null) {
-            return false;
-        }
-        return true;
-    }
+
 
     public void openBaseActivity() {
         Intent intent = new Intent(this, BaseActivity.class);

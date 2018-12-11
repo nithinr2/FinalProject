@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        User temp = new User();
+        temp.addUsers();
         logInBttn = findViewById(R.id.logInBttn);
         logInBttn.setOnClickListener(new View.OnClickListener() {
             @Override
