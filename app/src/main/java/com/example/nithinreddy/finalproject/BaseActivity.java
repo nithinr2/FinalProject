@@ -1,25 +1,25 @@
 package com.example.nithinreddy.finalproject;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class BaseActivity extends AppCompatActivity {
     private TextView nameOneTxt; private TextView nameTwoTxt; private TextView nameThreeTxt;
-    private TextView usernameOneTxt; private TextView usernameTwoTxt; private TextView usernameThreeTxt;
-    private TextView genderOneTxt; private TextView genderTwoTxt;
-    private TextView genderThreeTxt; private TextView phoneOneTxt;
-    private TextView phoneTwoTxt; private TextView phoneThreeTxt;
-    private ImageView profilePic;
-    private User userOne; private User userTwo; private User userThree;
+    private TextView usernameOneTxt;
+    private TextView genderOneTxt;
+    private TextView phoneOneTxt;
+    private User userOne;
+    private Button openMainBttn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
-
-        profilePic = findViewById(R.id.imageView2);
 
         findMatches();
 
@@ -39,40 +39,13 @@ public class BaseActivity extends AppCompatActivity {
         phoneOneTxt = findViewById(R.id.phoneOneTxt);
         phoneOneTxt.setText(firstPhone);
 
-
-        /*CharSequence secondMatch = (CharSequence) userTwo.getName();
-        nameTwoTxt = findViewById(R.id.nameTwoTxt);
-        nameTwoTxt.setText(secondMatch);
-
-        CharSequence secondUsername = (CharSequence) userTwo.getUsername();
-        usernameTwoTxt = findViewById(R.id.usernameTwoTxt);
-        usernameTwoTxt.setText(secondUsername);
-
-        CharSequence secondGender = (CharSequence) userTwo.getGender();
-        genderTwoTxt = findViewById(R.id.genderTwoTxt);
-        genderTwoTxt.setText(secondGender);
-
-        CharSequence secondPhone = (CharSequence) userTwo.getPhone();
-        phoneTwoTxt = findViewById(R.id.phoneTwoTxt);
-        phoneThreeTxt.setText(secondPhone);
-
-
-        CharSequence thirdMatch = (CharSequence) userThree.getName();
-        nameThreeTxt = findViewById(R.id.nameThreeTxt);
-        nameThreeTxt.setText(thirdMatch);
-
-        CharSequence thirdUsername = (CharSequence) userThree.getUsername();
-        usernameThreeTxt = findViewById(R.id.usernameThreeTxt);
-        usernameThreeTxt.setText(thirdUsername);
-
-        CharSequence thirdGender = (CharSequence) userThree.getGender();
-        genderThreeTxt = findViewById(R.id.genderThreeTxt);
-        genderThreeTxt.setText(thirdGender);
-
-        CharSequence thirdPhone = (CharSequence) userThree.getPhone();
-        phoneThreeTxt = findViewById(R.id.phoneThreeTxt);
-        phoneThreeTxt.setText(thirdPhone);*/
-
+        openMainBttn = findViewById(R.id.openMainBttn);
+        openMainBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMainActivity();
+            }
+        });
     }
 
     private void findMatches() {
@@ -97,5 +70,10 @@ public class BaseActivity extends AppCompatActivity {
             }
         }
         userOne = bestMatch;
+    }
+
+    private void openMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
